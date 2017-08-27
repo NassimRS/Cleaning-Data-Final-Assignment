@@ -1,3 +1,7 @@
+Code Book
+=================
+This code book describes the measurements performed, the data collected, the variables calculated and the R scipt prformance step by step.
+
 Variable Selection for the Database
 =================
 
@@ -112,7 +116,7 @@ A R script called run_analysis was created which performs the following actions 
 * `subject` - The ID of the test subject
 * `activity` - The type of activity performed when the corresponding measurements were taken
 
-## Code performs the following steps
+## Script performs the following steps
 
 * `Step1` The data was first uploaded and the training and test sets was merged to create one data set stored in df_merged
 * `Step2` The merged data was labeled based on features (Appropriately labels the data set with descriptive variable names) stored in df_features and added to df_merged
