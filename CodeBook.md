@@ -8,9 +8,9 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
 These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. Here is the complete list of variables:
 
-## Measurements
+## Variables
 
 * `tBodyAccMeanX`
 * `tBodyAccMeanY`
@@ -107,15 +107,21 @@ R Script
 
 A R script called run_analysis was created which performs the following actions on the dataset described above:
 
-1- The data was first uploaded and the training and test sets was merged to create one data set stored in df_merged
-2- The merged data was labeled based on features (Appropriately labels the data set with descriptive variable names) stored in df_features and added to df_merged
-3- Then only the measurements on the mean and standard deviation for each measurement was extracted and stored in df_mergedMeanStd
-4- Activity labels was read for train and test data and was added to the merged data 
-5- Subject labels for train and test data was read and added to the merged data
-6- A descriptive activity names were replaced the numbers correspondent to each activity in the data set
-7- A second, independent tidy data set was created with the average of each variable for each activity and each subject. This data set was 
-called df_new and was stored in NewDataSet.txt file
-8-End
+## Identifiers for the R script
+
+* `subject` - The ID of the test subject
+* `activity` - The type of activity performed when the corresponding measurements were taken
+
+## Code performs the following steps
+
+* `Step1` The data was first uploaded and the training and test sets was merged to create one data set stored in df_merged
+* `Step2` The merged data was labeled based on features (Appropriately labels the data set with descriptive variable names) stored in df_features and added to df_merged
+* `Step3` Then only the measurements on the mean and standard deviation for each measurement was extracted and stored in df_mergedMeanStd
+* `Step4` Activity labels was read for train and test data and was added to the merged data 
+* `Step5` Subject labels for train and test data was read and added to the merged data
+* `Step6` A descriptive activity names were replaced the numbers correspondent to each activity in the data set
+* `Step7` A second, independent tidy data set was created with the average of each variable for each activity and each subject. This data set was called df_new and was stored in NewDataSet.txt file
+* `Step8`End
 
 
 
